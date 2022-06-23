@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="AgregarLectura.aspx.cs" Inherits="EjercicioPrueba3.AgregarLectura" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="Contenido" runat="server">
 
         
     <div class="row">

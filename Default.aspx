@@ -13,17 +13,30 @@
             </div>
             <div class="card">
                 <div class="card-header bg-dark text-white">
-     <a href="Default.aspx">Default.aspx</a>
+                 <a href="Default.aspx">Default.aspx</a>
                     <h3>Agregar Medidores</h3>
                 </div>
                 <div class="card-body">
                     <div class="form-group">
                         <label for="nombreTxt">ID Medidor: </label>
-                        <asp:TextBox ID="nombreTxt" CssClass="form-control" runat="server"></asp:TextBox> 
+                        <asp:TextBox ID="nombreTxt" CssClass="form-control" runat="server" MaxLength="6"></asp:TextBox> 
                     </div>
+                   
+                     <div class="form-group">
+                        <label for="nivelRbl">Nivel</label>
+                        <asp:RadioButtonList runat="server" ID="nivelRbl">
+                            <asp:ListItem Selected="True" Value="1" Text="Agua"></asp:ListItem>
+                            <asp:ListItem Value="2" Text="Luz"></asp:ListItem>
+                            
+                        </asp:RadioButtonList>
+                    </div>
+
+
                     <div class="form-group">
                         <asp:Button runat="server" ID="agregarBtn" Text="Agregar" CssClass="btn btn-primary" OnClick="agregarBtn_Click"/>
                     </div>
+
+
 
                 </div>
             </div>

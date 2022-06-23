@@ -26,18 +26,25 @@ namespace EjercicioPrueba3
         {
         }
 
+
+
+
+
         protected void agregarBtn_Click(object sender, EventArgs e)
         {
-
+          
 
             //1. Obtener los datos del formulario
             string id = this.nombreTxt.Text.Trim();
+            int nivel = Convert.ToInt32(this.nivelRbl.SelectedValue);
 
+            validar(  id,  nivel);
             //2. construir el objeto de tipo cliente
 
             Medidor medidor = new Medidor()
             {
                 Id = id,
+                Nivel = nivel,
 
             };
             //3. Llamar al DAL
@@ -46,6 +53,11 @@ namespace EjercicioPrueba3
             this.mensajeLbl.Text = "Medidor Agregar Exitosamente";
             Response.Redirect("VerMedidores.aspx");
 
+        }
+
+        private void validar(string id, int nivel)
+        {
+            throw new NotImplementedException();
         }
     }
 }   

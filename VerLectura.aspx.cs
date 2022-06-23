@@ -34,6 +34,7 @@ namespace EjercicioPrueba3
 
             this.grillaLecturas.DataSource = filtrada;
             this.grillaLecturas.DataBind();
+
         }
 
         protected void grillaLecturas_RowCommand(object sender, GridViewCommandEventArgs e)

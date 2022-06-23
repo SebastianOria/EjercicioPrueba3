@@ -13,7 +13,7 @@ namespace EjercicioPrueba3
 
     public partial class Default
     {
-        
+
         /// <summary>
         /// Control mensajeLbl.
         /// </summary>
@@ -31,6 +31,15 @@ namespace EjercicioPrueba3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nombreTxt;
+
+        /// <summary>
+        /// Control nivelRbl.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList nivelRbl;
 
         /// <summary>
         /// Control agregarBtn.

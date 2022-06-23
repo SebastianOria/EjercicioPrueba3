@@ -17,24 +17,56 @@ namespace EjercicioPrueba3
         {
             if (!IsPostBack)
             {
-                List<Medidor> medidor = medidorDAL.ObtenerMedidores();
-
-                this.grillaMedidores.DataSource = medidor;
-                this.grillaMedidores.DataBind();
+                cargarGrilla();
             }
 
         }
+
+        private void cargarGrilla()
+        {
+            List<Medidor> medidor = medidorDAL.ObtenerMedidores();
+
+            this.grillaMedidores.DataSource = medidor;
+            this.grillaMedidores.DataBind();
+        }
+
+        private void cargaGrilla(List<Medidor> filtrada)
+        {
+            List<Medidor> medidor = medidorDAL.ObtenerMedidores();
+            this.grillaMedidores.DataSource = filtrada;
+            this.grillaMedidores.DataBind();
+        }
+
 
         protected void grillaMedidores_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "eliminar")
-            {
-                //significa que el usuario apreto el boton eliminar
-                //por tanto, tengo que eliminar el cliente
-                string id = Convert.ToString(e.CommandArgument);
-                medidorDAL.Eliminar(id);
 
+        }
+
+        protected void nivelDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.nivelDdl.SelectedItem != null)
+            {
+                int nivel = Convert.ToInt32(this.nivelDdl.SelectedItem.Value);
+                //filtrar por nivel
+                List<Medidor> filtrada = medidorDAL.Filtrar(nivel);
+                cargaGrilla(filtrada);
             }
         }
+
+
+
     }
+    
+
+
+
+
+
+
+
+
+
+
 }
+
