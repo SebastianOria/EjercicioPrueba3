@@ -1,22 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MedidorModel
+﻿namespace Medidor
 {
     public class Medidor
     {
-        private string id;
+        private string idMedidor;
 
-        public string Id { get => id; set => id = value; }
-
-        public override string ToString()
-        {
-            return id;
-        }
-
-
+        public string IdMedidor { get => idMedidor; set => idMedidor = value; }
     }
 }

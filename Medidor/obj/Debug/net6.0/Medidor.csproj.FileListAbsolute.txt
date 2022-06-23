@@ -1,0 +1,12 @@
+C:\Users\cb_hu\source\repos\Medidor\bin\Debug\net6.0\Medidor.deps.json
+C:\Users\cb_hu\source\repos\Medidor\bin\Debug\net6.0\Medidor.dll
+C:\Users\cb_hu\source\repos\Medidor\bin\Debug\net6.0\Medidor.pdb
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\Medidor.csproj.AssemblyReference.cache
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\Medidor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\Medidor.AssemblyInfoInputs.cache
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\Medidor.AssemblyInfo.cs
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\Medidor.csproj.CoreCompileInputs.cache
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\Medidor.dll
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\refint\Medidor.dll
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\Medidor.pdb
+C:\Users\cb_hu\source\repos\Medidor\obj\Debug\net6.0\ref\Medidor.dll

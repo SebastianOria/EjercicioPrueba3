@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Medidor</id>
+    <version>1.0.0</version>
+    <authors>Medidor</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\cb_hu\source\repos\Medidor\bin\Debug\net6.0\Medidor.dll" target="lib\net6.0\Medidor.dll" />
+  </files>
+</package>
