@@ -45,6 +45,11 @@ namespace Modelos.DAL
         }
 
 
+        public List<Medidor> Filtrar(int nivel)
+        {
+            return medidores.FindAll(c => c.Nivel == nivel);
+        }
+
     }
 }
 
