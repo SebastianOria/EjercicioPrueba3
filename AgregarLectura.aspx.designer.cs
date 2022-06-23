@@ -23,14 +23,16 @@ namespace EjercicioPrueba3
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label mensajeLbl;
 
+        protected global::System.Web.UI.WebControls.DropDownList medidorlist ;
+
         /// <summary>
-        /// Control idmedidor.
+        /// Control dropdown.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idmedidor;
+        protected global::System.Web.UI.WebControls.DropDownList dropdown;
 
         /// <summary>
         /// Control fecha.

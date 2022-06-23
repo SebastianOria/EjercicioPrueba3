@@ -14,8 +14,8 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="nombreTxt">ID Medidor: </label>
-                        <asp:TextBox ID="idmedidor" CssClass="form-control" runat="server"></asp:TextBox> 
+                        <label for="idmedidor">ID Medidor: </label>
+                        <asp:DropDownList runat="server" ID="dropdown"  CssClass="form-control"></asp:DropDownList>
                     </div>
 
                     <div class="form-group">

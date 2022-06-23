@@ -23,6 +23,12 @@ namespace EjercicioPrueba3
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<Medidor> medidor = medidorDAL.ObtenerMedidores();
+            this.medidorlist.DataSource = medidor;
+            this.medidorlist.DataTextField = "ID";
+            this.medidorlist.DataValueField = "Codigo";
+            this.medidorlist.DataBind();
+
         }
 
         protected void agregarBtn_Click(object sender, EventArgs e)
@@ -30,7 +36,7 @@ namespace EjercicioPrueba3
 
 
             //1. Obtener los datos del formulario
-            string idMedidor = this.idmedidor.Text.Trim(); 
+            
             string fecha  = this.fecha.Text.Trim();
             string hora =  this.hora.Text.Trim();
             string minutos = this.minutos.Text.Trim();
