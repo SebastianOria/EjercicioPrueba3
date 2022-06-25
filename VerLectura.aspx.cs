@@ -17,6 +17,11 @@ namespace EjercicioPrueba3
         {
             if (!IsPostBack)
             {
+                List<Medidor> medidor = medidorDAL.ObtenerMedidores();
+                this.nivelDdl.DataSource = medidor;
+                this.nivelDdl.DataTextField = "Id";
+                this.nivelDdl.DataValueField = "Id";
+                this.nivelDdl.DataBind();
                 cargaGrilla();
             }
 
@@ -48,10 +53,16 @@ namespace EjercicioPrueba3
             if (this.nivelDdl.SelectedItem != null)
             {
                 string nivel = this.nivelDdl.SelectedItem.Value;
-                //filtrar por nivel
+             
                 List<Lectura> filtrada = lecturaDAL.Filtrar(nivel);
                 cargaGrilla(filtrada);
             }
+        }
+
+        protected void actualizarBtn_Click(object sender, EventArgs e)
+        {
+            cargaGrilla();
+
         }
 
 

@@ -10,12 +10,11 @@
                     <div class="form-group">
                         <label for ="nivelDdl"> Filtrar por Medidor: </label>
                         <asp:DropDownList AutoPostBack="true" OnSelectedIndexChanged="nivelDdl_SelectedIndexChanged" runat="server" ID="nivelDdl">
-                            <asp:ListItem Value="1" Text="Silver"></asp:ListItem>
-                            <asp:ListItem Value="2" Text="Gold"></asp:ListItem>
-                            <asp:ListItem Value="3" Text="Platinum"></asp:ListItem>
+             
                         </asp:DropDownList>
                     </div>
                     <asp:GridView CssClass="table table-hover table-bordered" 
+
                         OnRowCommand="grillaLecturas_RowCommand"
                         AutoGenerateColumns="false" runat="server" ID="grillaLecturas">
                        <Columns>
@@ -29,6 +28,9 @@
                            <asp:BoundField DataField="Consumo" HeaderText="Consumo" />
                        </Columns>
                     </asp:GridView>
+                     <div class="form-group">
+                        <asp:Button runat="server" ID="agregarBtn" Text="Actualizar" CssClass="btn btn-primary" OnClick="actualizarBtn_Click"/>
+                    </div>
 
                 </div>
             </div>

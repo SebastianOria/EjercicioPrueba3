@@ -24,6 +24,7 @@ namespace EjercicioPrueba3
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
 
 
@@ -38,26 +39,44 @@ namespace EjercicioPrueba3
             string id = this.nombreTxt.Text.Trim();
             int nivel = Convert.ToInt32(this.nivelRbl.SelectedValue);
 
-            validar(  id,  nivel);
+            List<Medidor> a  = medidorDAL.Buscar(this.nombreTxt.Text.Trim());
+
+
             //2. construir el objeto de tipo cliente
-
-            Medidor medidor = new Medidor()
+            if (a.Count == 0)
             {
-                Id = id,
-                Nivel = nivel,
 
-            };
-            //3. Llamar al DAL
-            medidorDAL.AgregarMedidor(medidor);
-            //4. Mostrar mensajae de exito
-            this.mensajeLbl.Text = "Medidor Agregar Exitosamente";
-            Response.Redirect("VerMedidores.aspx");
+                Medidor medidor = new Medidor()
+                {
+                    Id = id,
+                    Nivel = nivel,
+
+                };
+
+
+
+                //3. Llamar al DAL
+                medidorDAL.AgregarMedidor(medidor);
+                //4. Mostrar mensajae de exito
+                this.mensajeLbl.Text = "Medidor Agregar Exitosamente";
+                Response.Redirect("VerMedidores.aspx");
+
+
+            }
+            else {
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('El medidor ya exite');", true);
+
+            
+            }
 
         }
+      
 
-        private void validar(string id, int nivel)
-        {
-            throw new NotImplementedException();
-        }
     }
+
+
+   
+
+
 }   

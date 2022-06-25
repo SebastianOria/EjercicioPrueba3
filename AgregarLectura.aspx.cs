@@ -23,11 +23,16 @@ namespace EjercicioPrueba3
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack) { 
             List<Medidor> medidor = medidorDAL.ObtenerMedidores();
-            this.medidorlist.DataSource = medidor;
-            this.medidorlist.DataTextField = "ID";
-            this.medidorlist.DataValueField = "Codigo";
-            this.medidorlist.DataBind();
+            this.dropdown.DataSource = medidor;
+            this.dropdown.DataTextField = "Id";
+            this.dropdown.DataValueField = "Id";
+            this.dropdown.DataBind();
+
+            }
+            
+
 
         }
 
@@ -36,8 +41,23 @@ namespace EjercicioPrueba3
 
 
             //1. Obtener los datos del formulario
+
+
+            string medidor = this.dropdown.SelectedValue;
+
+            string fecha;
+
+
+            if (!Calendar1.SelectedDate.ToShortDateString().Equals("01-01-0001"))
+            {
+                 fecha = Calendar1.SelectedDate.ToShortDateString();
+            }
+            else { 
             
-            string fecha  = this.fecha.Text.Trim();
+                 fecha  = Calendar1.TodaysDate.ToShortDateString();
+            }
+
+            
             string hora =  this.hora.Text.Trim();
             string minutos = this.minutos.Text.Trim();
             string valorConsum = this.valorConsum.Text.Trim();
@@ -50,7 +70,7 @@ namespace EjercicioPrueba3
 
             Lectura lectura = new Lectura()
             {
-                Idmedidor = idMedidor,
+                Idmedidor = medidor,
                 Fecha = (DateTime)Convert.ChangeType(fecha2, typeof(DateTime)),
                 Consumo = valorConsum
 
@@ -61,6 +81,12 @@ namespace EjercicioPrueba3
             this.mensajeLbl.Text = "Lectura Agregada Exitosamente";
             Response.Redirect("VerLectura.aspx");
 
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            
+            string fecha = Calendar1.SelectedDate.ToShortDateString();
         }
     }
 }

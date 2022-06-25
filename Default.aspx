@@ -19,8 +19,11 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="nombreTxt">ID Medidor: </label>
-                        <asp:TextBox ID="nombreTxt" CssClass="form-control" runat="server" MaxLength="6"></asp:TextBox> 
-                    </div>
+                        <asp:TextBox ID="nombreTxt" CssClass="form-control" runat="server" onkeypress ="javascript:return solonumeros(event)">
+                        </asp:TextBox> 
+                         
+
+                    </div>      
                    
                      <div class="form-group">
                         <label for="nivelRbl">Nivel</label>
@@ -30,12 +33,36 @@
                             
                         </asp:RadioButtonList>
                     </div>
-
+                        
+                <asp:requiredfieldvalidator id="RequiredFieldValidator1" forecolor="Red" errormessage="Ingresa un Medidor" controltovalidate="nombreTxt" runat="server">
+                </asp:requiredfieldvalidator>
 
                     <div class="form-group">
                         <asp:Button runat="server" ID="agregarBtn" Text="Agregar" CssClass="btn btn-primary" OnClick="agregarBtn_Click"/>
                     </div>
 
+                    <script>
+        function solonumeros(e) {
+ 
+            var key;
+ 
+            if (window.event) // IE
+            {
+                key = e.keyCode;
+            }
+            else if (e.which) // Netscape/Firefox/Opera
+            {
+                key = e.which;
+            }
+ 
+            if (key < 48 || key > 57) {
+                return false;
+            }
+ 
+            return true;
+        }
+ 
+                    </script>
 
 
                 </div>

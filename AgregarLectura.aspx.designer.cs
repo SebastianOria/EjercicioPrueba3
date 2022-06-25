@@ -23,8 +23,6 @@ namespace EjercicioPrueba3
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label mensajeLbl;
 
-        protected global::System.Web.UI.WebControls.DropDownList medidorlist ;
-
         /// <summary>
         /// Control dropdown.
         /// </summary>
@@ -35,13 +33,13 @@ namespace EjercicioPrueba3
         protected global::System.Web.UI.WebControls.DropDownList dropdown;
 
         /// <summary>
-        /// Control fecha.
+        /// Control Calendar1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fecha;
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
 
         /// <summary>
         /// Control hora.
@@ -53,6 +51,15 @@ namespace EjercicioPrueba3
         protected global::System.Web.UI.WebControls.TextBox hora;
 
         /// <summary>
+        /// Control RequiredFieldValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+        /// <summary>
         /// Control minutos.
         /// </summary>
         /// <remarks>
@@ -62,6 +69,15 @@ namespace EjercicioPrueba3
         protected global::System.Web.UI.WebControls.TextBox minutos;
 
         /// <summary>
+        /// Control RequiredFieldValidator3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+
+        /// <summary>
         /// Control valorConsum.
         /// </summary>
         /// <remarks>
@@ -69,6 +85,15 @@ namespace EjercicioPrueba3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox valorConsum;
+
+        /// <summary>
+        /// Control RequiredFieldValidator4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
         /// <summary>
         /// Control agregarBtn.
