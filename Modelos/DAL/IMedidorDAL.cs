@@ -11,7 +11,9 @@ namespace Modelos.DAL
         List<Medidor> ObtenerMedidores();
         void AgregarMedidor(Medidor medidor);
 
-        void Eliminar(string id);
+        
         List<Medidor> Filtrar(int nivel);
+        List<Medidor> Buscar(string id);
+
     }
 }

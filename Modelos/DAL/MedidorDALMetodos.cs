@@ -26,18 +26,14 @@ namespace Modelos.DAL
 
 
         }
-
+        
         public List<Medidor> ObtenerMedidores()
         {
+
             return medidores;
 
         }
-        public void Eliminar(string id)
-        {
-            Medidor eliminando = medidores.Find(c => c.Id == id);
-            medidores.Remove(eliminando);
-         
-        }
+   
 
         public void AgregarMedidor(Medidor medidor)
         {
@@ -48,6 +44,10 @@ namespace Modelos.DAL
         public List<Medidor> Filtrar(int nivel)
         {
             return medidores.FindAll(c => c.Nivel == nivel);
+        }
+        public List<Medidor> Buscar(string id)
+        {
+            return medidores.FindAll(c => c.Id == id);
         }
 
     }
